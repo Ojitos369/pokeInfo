@@ -15,9 +15,11 @@ class GetTipos(GetApi):
         tipos = []
         with open(file, "r") as f:
             tipos = json.loads(f.read())
-            tipos = tipos["tipos"]
-        
-        self.response = {
-            "tipos": tipos,
-        }
+
+        self.response = tipos
+
+"""
+
+
+"""
 

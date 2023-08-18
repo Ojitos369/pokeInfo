@@ -1,5 +1,471 @@
 {
-    "tipos": [
-        
-    ]
+    "normal": {
+        "dam": [
+            "rock",
+            "steel"
+        ],
+        "recibed": [
+            "fighting"
+        ],
+        "recibem": [],
+        "dad": [],
+        "da0": [
+            "ghost"
+        ],
+        "recibe0": [
+            "ghost"
+        ]
+    },
+    "fighting": {
+        "dam": [
+            "flying",
+            "poison",
+            "bug",
+            "psychic",
+            "fairy"
+        ],
+        "recibed": [
+            "flying",
+            "psychic",
+            "fairy"
+        ],
+        "recibem": [
+            "rock",
+            "bug",
+            "dark"
+        ],
+        "dad": [
+            "normal",
+            "rock",
+            "steel",
+            "ice",
+            "dark"
+        ],
+        "da0": [
+            "ghost"
+        ],
+        "recibe0": []
+    },
+    "flying": {
+        "dam": [
+            "rock",
+            "steel",
+            "electric"
+        ],
+        "recibed": [
+            "rock",
+            "electric",
+            "ice"
+        ],
+        "recibem": [
+            "fighting",
+            "bug",
+            "grass"
+        ],
+        "dad": [
+            "fighting",
+            "bug",
+            "grass"
+        ],
+        "da0": [],
+        "recibe0": [
+            "ground"
+        ]
+    },
+    "poison": {
+        "dam": [
+            "poison",
+            "ground",
+            "rock",
+            "ghost"
+        ],
+        "recibed": [
+            "ground",
+            "psychic"
+        ],
+        "recibem": [
+            "fighting",
+            "poison",
+            "bug",
+            "grass",
+            "fairy"
+        ],
+        "dad": [
+            "grass",
+            "fairy"
+        ],
+        "da0": [
+            "steel"
+        ],
+        "recibe0": []
+    },
+    "ground": {
+        "dam": [
+            "bug",
+            "grass"
+        ],
+        "recibed": [
+            "water",
+            "grass",
+            "ice"
+        ],
+        "recibem": [
+            "poison",
+            "rock"
+        ],
+        "dad": [
+            "poison",
+            "rock",
+            "steel",
+            "fire",
+            "electric"
+        ],
+        "da0": [
+            "flying"
+        ],
+        "recibe0": [
+            "electric"
+        ]
+    },
+    "rock": {
+        "dam": [
+            "fighting",
+            "ground",
+            "steel"
+        ],
+        "recibed": [
+            "fighting",
+            "ground",
+            "steel",
+            "water",
+            "grass"
+        ],
+        "recibem": [
+            "normal",
+            "flying",
+            "poison",
+            "fire"
+        ],
+        "dad": [
+            "flying",
+            "bug",
+            "fire",
+            "ice"
+        ],
+        "da0": [],
+        "recibe0": []
+    },
+    "bug": {
+        "dam": [
+            "fighting",
+            "flying",
+            "poison",
+            "ghost",
+            "steel",
+            "fire",
+            "fairy"
+        ],
+        "recibed": [
+            "flying",
+            "rock",
+            "fire"
+        ],
+        "recibem": [
+            "fighting",
+            "ground",
+            "grass"
+        ],
+        "dad": [
+            "grass",
+            "psychic",
+            "dark"
+        ],
+        "da0": [],
+        "recibe0": []
+    },
+    "ghost": {
+        "dam": [
+            "dark"
+        ],
+        "recibed": [
+            "ghost",
+            "dark"
+        ],
+        "recibem": [
+            "poison",
+            "bug"
+        ],
+        "dad": [
+            "ghost",
+            "psychic"
+        ],
+        "da0": [
+            "normal"
+        ],
+        "recibe0": [
+            "normal",
+            "fighting"
+        ]
+    },
+    "steel": {
+        "dam": [
+            "steel",
+            "fire",
+            "water",
+            "electric"
+        ],
+        "recibed": [
+            "fighting",
+            "ground",
+            "fire"
+        ],
+        "recibem": [
+            "normal",
+            "flying",
+            "rock",
+            "bug",
+            "steel",
+            "grass",
+            "psychic",
+            "ice",
+            "dragon",
+            "fairy"
+        ],
+        "dad": [
+            "rock",
+            "ice",
+            "fairy"
+        ],
+        "da0": [],
+        "recibe0": [
+            "poison"
+        ]
+    },
+    "fire": {
+        "dam": [
+            "rock",
+            "fire",
+            "water",
+            "dragon"
+        ],
+        "recibed": [
+            "ground",
+            "rock",
+            "water"
+        ],
+        "recibem": [
+            "bug",
+            "steel",
+            "fire",
+            "grass",
+            "ice",
+            "fairy"
+        ],
+        "dad": [
+            "bug",
+            "steel",
+            "grass",
+            "ice"
+        ],
+        "da0": [],
+        "recibe0": []
+    },
+    "water": {
+        "dam": [
+            "water",
+            "grass",
+            "dragon"
+        ],
+        "recibed": [
+            "grass",
+            "electric"
+        ],
+        "recibem": [
+            "steel",
+            "fire",
+            "water",
+            "ice"
+        ],
+        "dad": [
+            "ground",
+            "rock",
+            "fire"
+        ],
+        "da0": [],
+        "recibe0": []
+    },
+    "grass": {
+        "dam": [
+            "flying",
+            "poison",
+            "bug",
+            "steel",
+            "fire",
+            "grass",
+            "dragon"
+        ],
+        "recibed": [
+            "flying",
+            "poison",
+            "bug",
+            "fire",
+            "ice"
+        ],
+        "recibem": [
+            "ground",
+            "water",
+            "grass",
+            "electric"
+        ],
+        "dad": [
+            "ground",
+            "rock",
+            "water"
+        ],
+        "da0": [],
+        "recibe0": []
+    },
+    "electric": {
+        "dam": [
+            "grass",
+            "electric",
+            "dragon"
+        ],
+        "recibed": [
+            "ground"
+        ],
+        "recibem": [
+            "flying",
+            "steel",
+            "electric"
+        ],
+        "dad": [
+            "flying",
+            "water"
+        ],
+        "da0": [
+            "ground"
+        ],
+        "recibe0": []
+    },
+    "psychic": {
+        "dam": [
+            "steel",
+            "psychic"
+        ],
+        "recibed": [
+            "bug",
+            "ghost",
+            "dark"
+        ],
+        "recibem": [
+            "fighting",
+            "psychic"
+        ],
+        "dad": [
+            "fighting",
+            "poison"
+        ],
+        "da0": [
+            "dark"
+        ],
+        "recibe0": []
+    },
+    "ice": {
+        "dam": [
+            "steel",
+            "fire",
+            "water",
+            "ice"
+        ],
+        "recibed": [
+            "fighting",
+            "rock",
+            "steel",
+            "fire"
+        ],
+        "recibem": [
+            "ice"
+        ],
+        "dad": [
+            "flying",
+            "ground",
+            "grass",
+            "dragon"
+        ],
+        "da0": [],
+        "recibe0": []
+    },
+    "dragon": {
+        "dam": [
+            "steel"
+        ],
+        "recibed": [
+            "ice",
+            "dragon",
+            "fairy"
+        ],
+        "recibem": [
+            "fire",
+            "water",
+            "grass",
+            "electric"
+        ],
+        "dad": [
+            "dragon"
+        ],
+        "da0": [
+            "fairy"
+        ],
+        "recibe0": []
+    },
+    "dark": {
+        "dam": [
+            "fighting",
+            "dark",
+            "fairy"
+        ],
+        "recibed": [
+            "fighting",
+            "bug",
+            "fairy"
+        ],
+        "recibem": [
+            "ghost",
+            "dark"
+        ],
+        "dad": [
+            "ghost",
+            "psychic"
+        ],
+        "da0": [],
+        "recibe0": [
+            "psychic"
+        ]
+    },
+    "fairy": {
+        "dam": [
+            "poison",
+            "steel",
+            "fire"
+        ],
+        "recibed": [
+            "poison",
+            "steel"
+        ],
+        "recibem": [
+            "fighting",
+            "bug",
+            "dark"
+        ],
+        "dad": [
+            "fighting",
+            "dragon",
+            "dark"
+        ],
+        "da0": [],
+        "recibe0": [
+            "dragon"
+        ]
+    }
 }
