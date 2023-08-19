@@ -52,6 +52,6 @@ for i, t in enumerate(types):
             data[t]["recibem"].append(types[j])
 
     
-pj(data)
+pj(data["fire"])
     
     

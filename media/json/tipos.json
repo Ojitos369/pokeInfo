@@ -1,396 +1,396 @@
 {
     "normal": {
         "dam": [
-            "rock",
-            "steel"
+            "roca",
+            "acero"
         ],
         "recibed": [
-            "fighting"
+            "pelea"
         ],
         "recibem": [],
         "dad": [],
         "da0": [
-            "ghost"
+            "fantasma"
         ],
         "recibe0": [
-            "ghost"
+            "fantasma"
         ]
     },
-    "fighting": {
+    "pelea": {
         "dam": [
-            "flying",
-            "poison",
-            "bug",
-            "psychic",
-            "fairy"
+            "volador",
+            "veneno",
+            "bicho",
+            "psiquico",
+            "hada"
         ],
         "recibed": [
-            "flying",
-            "psychic",
-            "fairy"
+            "volador",
+            "psiquico",
+            "hada"
         ],
         "recibem": [
-            "rock",
-            "bug",
-            "dark"
+            "roca",
+            "bicho",
+            "siniestro"
         ],
         "dad": [
             "normal",
-            "rock",
-            "steel",
-            "ice",
-            "dark"
+            "roca",
+            "acero",
+            "hielo",
+            "siniestro"
         ],
         "da0": [
-            "ghost"
+            "fantasma"
         ],
         "recibe0": []
     },
-    "flying": {
+    "volador": {
         "dam": [
-            "rock",
-            "steel",
-            "electric"
+            "roca",
+            "acero",
+            "electrico"
         ],
         "recibed": [
-            "rock",
-            "electric",
-            "ice"
+            "roca",
+            "electrico",
+            "hielo"
         ],
         "recibem": [
-            "fighting",
-            "bug",
-            "grass"
+            "pelea",
+            "bicho",
+            "planta"
         ],
         "dad": [
-            "fighting",
-            "bug",
-            "grass"
+            "pelea",
+            "bicho",
+            "planta"
         ],
         "da0": [],
         "recibe0": [
-            "ground"
+            "tierra"
         ]
     },
-    "poison": {
+    "veneno": {
         "dam": [
-            "poison",
-            "ground",
-            "rock",
-            "ghost"
+            "veneno",
+            "tierra",
+            "roca",
+            "fantasma"
         ],
         "recibed": [
-            "ground",
-            "psychic"
+            "tierra",
+            "psiquico"
         ],
         "recibem": [
-            "fighting",
-            "poison",
-            "bug",
-            "grass",
-            "fairy"
+            "pelea",
+            "veneno",
+            "bicho",
+            "planta",
+            "hada"
         ],
         "dad": [
-            "grass",
-            "fairy"
+            "planta",
+            "hada"
         ],
         "da0": [
-            "steel"
+            "acero"
         ],
         "recibe0": []
     },
-    "ground": {
+    "tierra": {
         "dam": [
-            "bug",
-            "grass"
+            "bicho",
+            "planta"
         ],
         "recibed": [
-            "water",
-            "grass",
-            "ice"
+            "agua",
+            "planta",
+            "hielo"
         ],
         "recibem": [
-            "poison",
-            "rock"
+            "veneno",
+            "roca"
         ],
         "dad": [
-            "poison",
-            "rock",
-            "steel",
-            "fire",
-            "electric"
+            "veneno",
+            "roca",
+            "acero",
+            "fuego",
+            "electrico"
         ],
         "da0": [
-            "flying"
+            "volador"
         ],
         "recibe0": [
-            "electric"
+            "electrico"
         ]
     },
-    "rock": {
+    "roca": {
         "dam": [
-            "fighting",
-            "ground",
-            "steel"
+            "pelea",
+            "tierra",
+            "acero"
         ],
         "recibed": [
-            "fighting",
-            "ground",
-            "steel",
-            "water",
-            "grass"
+            "pelea",
+            "tierra",
+            "acero",
+            "agua",
+            "planta"
         ],
         "recibem": [
             "normal",
-            "flying",
-            "poison",
-            "fire"
+            "volador",
+            "veneno",
+            "fuego"
         ],
         "dad": [
-            "flying",
-            "bug",
-            "fire",
-            "ice"
+            "volador",
+            "bicho",
+            "fuego",
+            "hielo"
         ],
         "da0": [],
         "recibe0": []
     },
-    "bug": {
+    "bicho": {
         "dam": [
-            "fighting",
-            "flying",
-            "poison",
-            "ghost",
-            "steel",
-            "fire",
-            "fairy"
+            "pelea",
+            "volador",
+            "veneno",
+            "fantasma",
+            "acero",
+            "fuego",
+            "hada"
         ],
         "recibed": [
-            "flying",
-            "rock",
-            "fire"
+            "volador",
+            "roca",
+            "fuego"
         ],
         "recibem": [
-            "fighting",
-            "ground",
-            "grass"
+            "pelea",
+            "tierra",
+            "planta"
         ],
         "dad": [
-            "grass",
-            "psychic",
-            "dark"
+            "planta",
+            "psiquico",
+            "siniestro"
         ],
         "da0": [],
         "recibe0": []
     },
-    "ghost": {
+    "fantasma": {
         "dam": [
-            "dark"
+            "siniestro"
         ],
         "recibed": [
-            "ghost",
-            "dark"
+            "fantasma",
+            "siniestro"
         ],
         "recibem": [
-            "poison",
-            "bug"
+            "veneno",
+            "bicho"
         ],
         "dad": [
-            "ghost",
-            "psychic"
+            "fantasma",
+            "psiquico"
         ],
         "da0": [
             "normal"
         ],
         "recibe0": [
             "normal",
-            "fighting"
+            "pelea"
         ]
     },
-    "steel": {
+    "acero": {
         "dam": [
-            "steel",
-            "fire",
-            "water",
-            "electric"
+            "acero",
+            "fuego",
+            "agua",
+            "electrico"
         ],
         "recibed": [
-            "fighting",
-            "ground",
-            "fire"
+            "pelea",
+            "tierra",
+            "fuego"
         ],
         "recibem": [
             "normal",
-            "flying",
-            "rock",
-            "bug",
-            "steel",
-            "grass",
-            "psychic",
-            "ice",
+            "volador",
+            "roca",
+            "bicho",
+            "acero",
+            "planta",
+            "psiquico",
+            "hielo",
             "dragon",
-            "fairy"
+            "hada"
         ],
         "dad": [
-            "rock",
-            "ice",
-            "fairy"
+            "roca",
+            "hielo",
+            "hada"
         ],
         "da0": [],
         "recibe0": [
-            "poison"
+            "veneno"
         ]
     },
-    "fire": {
+    "fuego": {
         "dam": [
-            "rock",
-            "fire",
-            "water",
+            "roca",
+            "fuego",
+            "agua",
             "dragon"
         ],
         "recibed": [
-            "ground",
-            "rock",
-            "water"
+            "tierra",
+            "roca",
+            "agua"
         ],
         "recibem": [
-            "bug",
-            "steel",
-            "fire",
-            "grass",
-            "ice",
-            "fairy"
+            "bicho",
+            "acero",
+            "fuego",
+            "planta",
+            "hielo",
+            "hada"
         ],
         "dad": [
-            "bug",
-            "steel",
-            "grass",
-            "ice"
+            "bicho",
+            "acero",
+            "planta",
+            "hielo"
         ],
         "da0": [],
         "recibe0": []
     },
-    "water": {
+    "agua": {
         "dam": [
-            "water",
-            "grass",
+            "agua",
+            "planta",
             "dragon"
         ],
         "recibed": [
-            "grass",
-            "electric"
+            "planta",
+            "electrico"
         ],
         "recibem": [
-            "steel",
-            "fire",
-            "water",
-            "ice"
+            "acero",
+            "fuego",
+            "agua",
+            "hielo"
         ],
         "dad": [
-            "ground",
-            "rock",
-            "fire"
+            "tierra",
+            "roca",
+            "fuego"
         ],
         "da0": [],
         "recibe0": []
     },
-    "grass": {
+    "planta": {
         "dam": [
-            "flying",
-            "poison",
-            "bug",
-            "steel",
-            "fire",
-            "grass",
+            "volador",
+            "veneno",
+            "bicho",
+            "acero",
+            "fuego",
+            "planta",
             "dragon"
         ],
         "recibed": [
-            "flying",
-            "poison",
-            "bug",
-            "fire",
-            "ice"
+            "volador",
+            "veneno",
+            "bicho",
+            "fuego",
+            "hielo"
         ],
         "recibem": [
-            "ground",
-            "water",
-            "grass",
-            "electric"
+            "tierra",
+            "agua",
+            "planta",
+            "electrico"
         ],
         "dad": [
-            "ground",
-            "rock",
-            "water"
+            "tierra",
+            "roca",
+            "agua"
         ],
         "da0": [],
         "recibe0": []
     },
-    "electric": {
+    "electrico": {
         "dam": [
-            "grass",
-            "electric",
+            "planta",
+            "electrico",
             "dragon"
         ],
         "recibed": [
-            "ground"
+            "tierra"
         ],
         "recibem": [
-            "flying",
-            "steel",
-            "electric"
+            "volador",
+            "acero",
+            "electrico"
         ],
         "dad": [
-            "flying",
-            "water"
+            "volador",
+            "agua"
         ],
         "da0": [
-            "ground"
+            "tierra"
         ],
         "recibe0": []
     },
-    "psychic": {
+    "psiquico": {
         "dam": [
-            "steel",
-            "psychic"
+            "acero",
+            "psiquico"
         ],
         "recibed": [
-            "bug",
-            "ghost",
-            "dark"
+            "bicho",
+            "fantasma",
+            "siniestro"
         ],
         "recibem": [
-            "fighting",
-            "psychic"
+            "pelea",
+            "psiquico"
         ],
         "dad": [
-            "fighting",
-            "poison"
+            "pelea",
+            "veneno"
         ],
         "da0": [
-            "dark"
+            "siniestro"
         ],
         "recibe0": []
     },
-    "ice": {
+    "hielo": {
         "dam": [
-            "steel",
-            "fire",
-            "water",
-            "ice"
+            "acero",
+            "fuego",
+            "agua",
+            "hielo"
         ],
         "recibed": [
-            "fighting",
-            "rock",
-            "steel",
-            "fire"
+            "pelea",
+            "roca",
+            "acero",
+            "fuego"
         ],
         "recibem": [
-            "ice"
+            "hielo"
         ],
         "dad": [
-            "flying",
-            "ground",
-            "grass",
+            "volador",
+            "tierra",
+            "planta",
             "dragon"
         ],
         "da0": [],
@@ -398,70 +398,70 @@
     },
     "dragon": {
         "dam": [
-            "steel"
+            "acero"
         ],
         "recibed": [
-            "ice",
+            "hielo",
             "dragon",
-            "fairy"
+            "hada"
         ],
         "recibem": [
-            "fire",
-            "water",
-            "grass",
-            "electric"
+            "fuego",
+            "agua",
+            "planta",
+            "electrico"
         ],
         "dad": [
             "dragon"
         ],
         "da0": [
-            "fairy"
+            "hada"
         ],
         "recibe0": []
     },
-    "dark": {
+    "siniestro": {
         "dam": [
-            "fighting",
-            "dark",
-            "fairy"
+            "pelea",
+            "siniestro",
+            "hada"
         ],
         "recibed": [
-            "fighting",
-            "bug",
-            "fairy"
+            "pelea",
+            "bicho",
+            "hada"
         ],
         "recibem": [
-            "ghost",
-            "dark"
+            "fantasma",
+            "siniestro"
         ],
         "dad": [
-            "ghost",
-            "psychic"
+            "fantasma",
+            "psiquico"
         ],
         "da0": [],
         "recibe0": [
-            "psychic"
+            "psiquico"
         ]
     },
-    "fairy": {
+    "hada": {
         "dam": [
-            "poison",
-            "steel",
-            "fire"
+            "veneno",
+            "acero",
+            "fuego"
         ],
         "recibed": [
-            "poison",
-            "steel"
+            "veneno",
+            "acero"
         ],
         "recibem": [
-            "fighting",
-            "bug",
-            "dark"
+            "pelea",
+            "bicho",
+            "siniestro"
         ],
         "dad": [
-            "fighting",
+            "pelea",
             "dragon",
-            "dark"
+            "siniestro"
         ],
         "da0": [],
         "recibe0": [
