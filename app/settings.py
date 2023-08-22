@@ -173,5 +173,5 @@ ce = CE(name_project = 'REANGO BASE', email_settings = email_settings)
 class MYE(Exception):
     pass
 
-# docker with mysql
-# dr run -d -p 3307:3306 --name pkcal -e MYSQL_ROOT_PASSWORD=root mysql:latest
+# docker with mysql - database pkcal - port 3307 - password root
+# dr run -d -p 3307:3306 --name pkcal -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=pkcal mysql

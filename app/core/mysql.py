@@ -77,7 +77,7 @@ class ConexionMySQL:
         return resultado
 
     @local_base
-    def ejecutar(self, query, params):
+    def ejecutar(self, query, params=None):
         self.query = query
         if params:
             self.cursor.execute(query, params)

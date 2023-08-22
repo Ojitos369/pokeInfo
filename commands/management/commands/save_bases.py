@@ -32,11 +32,13 @@ class Command(MyBaseCommand):
         query = f"""INSERT INTO tipos
                     (nombre) values (%s)
                     """
-        # for t in tipos:
-        #     if not conexion.ejecutar(query, (t,)):
-        #         conexion.rollback()
-        #         raise Exception("Error al guardar tipos")
-        # conexion.commit()
+        
+        print("Agregando tipos...")
+        for t in tipos:
+            if not conexion.ejecutar(query, (t,)):
+                conexion.rollback()
+                raise Exception("Error al guardar tipos")
+            conexion.commit()
         
         json_data_path = 'media/json/tipos.json'
         
@@ -45,14 +47,108 @@ class Command(MyBaseCommand):
         with open(json_data_path, 'r') as f:
             data = json.load(f)
         
+        query = "SELECT * FROM tipos WHERE nombre = '{}'"
         for k, v in data.items():
-            query = f"SELECT * FROM tipos WHERE nombre = '{k}'"
-            
-            rs = conexion.consulta_asociativa(query)
+            print(f"Datos de {k}...")
+            rs = conexion.consulta_asociativa(query.format(k))
             tipo = rs[0]
-            print(tipo)
-            
-            
-        
-        
-        
+
+            # dad - da_doble - da_a
+            print(f"Da Doble de {k}...")
+            dad = v["dad"]
+            for d in dad:
+                rs = conexion.consulta_asociativa(query.format(d))
+                tipo_d = rs[0]
+                            
+                qr = f"""INSERT INTO da_doble
+                        (tipo, da_a) VALUES
+                        ('{tipo["id"]}', '{tipo_d["id"]}')
+                        """
+                if not conexion.ejecutar(qr):
+                    conexion.rollback()
+                    raise Exception("Error al guardar da_doble")
+                conexion.commit()
+
+            # recibed - recibe_doble - recibe_de
+            print(f"Recibe Doble de {k}...")
+            recibed = v["recibed"]
+            for r in recibed:
+                rs = conexion.consulta_asociativa(query.format(r))
+                tipo_r = rs[0]
+                            
+                qr = f"""INSERT INTO recibe_doble
+                        (tipo, recibe_de) VALUES
+                        ('{tipo["id"]}', '{tipo_r["id"]}')
+                        """
+                if not conexion.ejecutar(qr):
+                    conexion.rollback()
+                    raise Exception("Error al guardar recibe_doble")
+                conexion.commit()
+
+            # dam - da_mitad - da_a
+            print(f"Da Mitad de {k}...")
+            dam = v["dam"]
+            for d in dam:
+                rs = conexion.consulta_asociativa(query.format(d))
+                tipo_d = rs[0]
+                            
+                qr = f"""INSERT INTO da_mitad
+                        (tipo, da_a) VALUES
+                        ('{tipo["id"]}', '{tipo_d["id"]}')
+                        """
+                if not conexion.ejecutar(qr):
+                    conexion.rollback()
+                    raise Exception("Error al guardar da_mitad")
+                conexion.commit()
+
+            # recibem - recibe_mitad - recibe_de
+            print(f"Recibe Mitad de {k}...")
+            recibem = v["recibem"]
+            for r in recibem:
+                rs = conexion.consulta_asociativa(query.format(r))
+                tipo_r = rs[0]
+                            
+                qr = f"""INSERT INTO recibe_mitad
+                        (tipo, recibe_de) VALUES
+                        ('{tipo["id"]}', '{tipo_r["id"]}')
+                        """
+                if not conexion.ejecutar(qr):
+                    conexion.rollback()
+                    raise Exception("Error al guardar recibe_mitad")
+                conexion.commit()
+
+            # da0 - da_nada - da_a
+            print(f"Da Nada de {k}...")
+            da0 = v["da0"]
+            for d in da0:
+                rs = conexion.consulta_asociativa(query.format(d))
+                tipo_d = rs[0]
+                            
+                qr = f"""INSERT INTO da_nada
+                        (tipo, da_a) VALUES
+                        ('{tipo["id"]}', '{tipo_d["id"]}')
+                        """
+                if not conexion.ejecutar(qr):
+                    conexion.rollback()
+                    raise Exception("Error al guardar da_nada")
+                conexion.commit()
+
+            # recibe0 - recibe_nada - recibe_de
+            print(f"Recibe Nada de {k}...")
+            recibe0 = v["recibe0"]
+            for r in recibe0:
+                rs = conexion.consulta_asociativa(query.format(r))
+                tipo_r = rs[0]
+                            
+                qr = f"""INSERT INTO recibe_nada
+                        (tipo, recibe_de) VALUES
+                        ('{tipo["id"]}', '{tipo_r["id"]}')
+                        """
+                if not conexion.ejecutar(qr):
+                    conexion.rollback()
+                    raise Exception("Error al guardar recibe_nada")
+                conexion.commit()
+
+            print("Agregado correctamente")
+
+
