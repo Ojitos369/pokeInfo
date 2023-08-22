@@ -25,3 +25,4 @@ and run django command to migrate view
 ```shell
 python manage.py migrate_view
 ```
+# ojitos369_mysql_db
