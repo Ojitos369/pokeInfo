@@ -101,6 +101,15 @@ WSGI_APPLICATION = 'app.wsgi.application'
 # }
 
 
+DBDATA = {
+    'ENGINE': 'django.db.backends.mysql',
+    'USER': os.environ.get('DB_USER'),
+    'PASSWORD': os.environ.get('DB_PASSWORD'),
+    'HOST': os.environ.get('DB_HOST'),
+    'PORT': os.environ.get('DB_PORT'),
+    'NAME': os.environ.get('DB_DATABASE'),
+}
+
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
@@ -163,3 +172,6 @@ ce = CE(name_project = 'REANGO BASE', email_settings = email_settings)
 
 class MYE(Exception):
     pass
+
+# docker with mysql
+# dr run -d -p 3307:3306 --name pkcal -e MYSQL_ROOT_PASSWORD=root mysql:latest

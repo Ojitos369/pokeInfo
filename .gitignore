@@ -30,3 +30,4 @@ venv
 *yarn-error.log*
 front/pnpm-lock.yaml
 *yarn-error.log*
+.vscode

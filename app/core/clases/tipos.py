@@ -27,6 +27,34 @@ class Tipo:
         return [x().get_nombre() for x in self.dad]
     def get_recibe0(self):
         return [x().get_nombre() for x in self.recibe0]
+    def get_damage(self):
+        danio = {}
+        for f in self.recibed:
+            x = f()
+            if x.nombre not in danio:
+                danio[x.nombre] = 0
+            danio[x.nombre] += 2
+        for f in self.recibem:
+            x = f()
+            if x.nombre not in danio:
+                danio[x.nombre] = 0
+            danio[x.nombre] -= 2
+        for f in self.recibe0:
+            x = f()
+            if x.nombre not in danio:
+                danio[x.nombre] = 1
+            danio[x.nombre] *= 0
+    
+        danio_fin = {}
+        for k, v in danio.items():
+            v = int(v)
+            if v != 0:
+                if v < 0:
+                    v = -1/v
+                danio_fin[k] = v
+        danio_fin = {k: v for k, v in sorted(danio_fin.items(), key=lambda item: item[1], reverse=True)}
+        return danio_fin
+            
 
 
 class Normal(Tipo):
@@ -236,5 +264,28 @@ class Doble(Tipo):
         self.recibe0 = p.recibe0 + s.recibe0
 
 
-ta = Doble(Tierra, Agua)
+class Multi(Tipo):
+    def __init__(self, *args):
+        super().__init__()
+        self.nombre = ''
+        self.dam = []
+        self.recibed = []
+        self.recibem = []
+        self.dad = []
+        self.da0 = []
+        self.recibe0 = []
+        for e in args:
+            e = e()
+            self.nombre += e.nombre + "-"
+            self.dam += e.dam
+            self.recibed += e.recibed
+            self.recibem += e.recibem
+            self.dad += e.dad
+            self.da0 += e.da0
+            self.recibe0 += e.recibe0
+        self.nombre = self.nombre[:-1]
+
+
+ta = Multi(Tierra, Agua)
+pb = type(ta)(Planta, Volador)
 
