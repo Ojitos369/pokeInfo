@@ -4,6 +4,7 @@ import { MyContext } from './MyContext';
 import { AllContext } from './MyContext';
 import { Theme } from '../Components/Theme';
 import { Test } from '../Components/Test';
+import { Main } from '../Components/Main';
 
 import { Route, Routes, Navigate } from 'react-router-dom';
 
@@ -50,7 +51,7 @@ function AppUI() {
                 <Route
                     path="/"
                     element={
-                        <MyComponent />
+                        <Main />
                     }
                 />
                 {/* -----------   /Home   ----------- */}

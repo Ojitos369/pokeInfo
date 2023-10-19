@@ -13,14 +13,20 @@ from rest_framework.response import Response
 from ojitos369.utils import get_d, print_line_center, printwln as pln
 
 # User
-from app.settings import MYE, prod_mode, ce, media_dir
+from app.settings import MYE, prod_mode, ce, media_dir, DBDATA, BASE_DIR
+from app.core.mysql import ConexionMySQL
+
 
 class BaseApi(APIView):
-    status = 200
-    response = {}
-    ce = ce
-    MYE = MYE
-    response_mode = 'json'
+    def __init__(self):
+        super().__init__()
+        self.status = 200
+        self.response = {}
+        self.ce = ce
+        self.MYE = MYE
+        self.raise_error = True
+        self.conexion = ConexionMySQL(DBDATA, raise_error=self.raise_error)
+        self.response_mode = 'json'
 
     def errors(self, e):
         try:

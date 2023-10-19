@@ -196,6 +196,21 @@ class functions {
         }
     }
 
+    peticion = () => {
+        const url = 'apps/tipos/show_danio/';
+        miAxios.post(
+            url,
+            {
+                tipos: ['fantasma', 'dragon']
+            }
+        ).then(response => {
+            const data = response.data;
+            console.log(data);
+        }).catch(error => {
+            console.log(error);
+        });
+    }
+
     // ------------------------------------------------------------------ //
     // ---------------------------   LEVELS   --------------------------- //
     // ------------------------------------------------------------------ //

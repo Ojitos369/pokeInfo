@@ -11,15 +11,19 @@ from django.core.management.base import BaseCommand
 # Ojitos369
 from ojitos369.utils import get_d, print_line_center, printwln as pln, print_json as pj
 from ojitos369.text_format import TextFormat as TF
+from app.settings import MYE, prod_mode, ce, media_dir, DBDATA, BASE_DIR
+from app.core.mysql import ConexionMySQL
 
 # User
 from app.settings import MYE, prod_mode, ce
 
 class MyBaseCommand(BaseCommand):
-    MYE = MYE
-    response_mode = 'json'
-    raise_error = True
-    ce = ce
+    def __init__(self):
+        super().__init__()
+        self.MYE = MYE
+        self.raise_error = True
+        self.ce = ce
+        self.conexion = ConexionMySQL(DBDATA, raise_error=self.raise_error)
 
     def errors(self, e):
         try:
